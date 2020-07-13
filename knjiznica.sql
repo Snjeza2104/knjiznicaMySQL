@@ -243,3 +243,11 @@ select * from knjigepopiscu;
 CREATE PROCEDURE jeftinijeod(
 IN cijenaunos INT)
 SELECT * FROM knjiga where cijena < cijenaunos;
+
+CALL jeftinijeod(100);
+
+CREATE PROCEDURE skupljeod(
+IN cijenaunos INT)
+SELECT * FROM knjiga where cijena > cijenaunos;
+
+CALL skupljeod(100);
